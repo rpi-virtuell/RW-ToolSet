@@ -5,7 +5,7 @@
  * Description: rpi-virtuell Hacks für Buddypress Instanzen. Erlaubt zusätzliche Dateitypen. Setze übergeordnete Sprachdateien. Fixed verschiedene Plugin Probleme
  * Author:      Joachim Happel
  * Author URI:  https://bbpress.org
- * Version:     0.0.1
+ * Version:     0.0.2
  /
 
 /**
@@ -28,8 +28,6 @@ function bp_get_current_group_id_in_group_hierarchy($current_group_id, $current_
 /**
 * Description: Erlaubt den Upload zusätzlicher Dateitypen. Setze übergeordnete Sprachdateien.
 */
-
-add_action('init', 'reliwerk_interim_solution',20);
 
 //http://www.paulund.co.uk/change-wordpress-upload-mime-types
 add_filter('upload_mimes','add_custom_mime_types');
