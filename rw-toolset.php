@@ -38,7 +38,8 @@ function add_custom_mime_types($mimes){
 		'ac3' => 'audio/ac3',
 		'mpa' => 'audio/MPA',
 		'flv' => 'video/x-flv',
-		'svg' => 'image/svg+xml'
+		'svg' => 'image/svg+xml',
+		'epub' => 'application/epub+zip'
 	));
 }
 
