@@ -5,6 +5,10 @@
  * Description: rpi-virtuell Hacks für Buddypress Instanzen. Erlaubt zusätzliche Dateitypen. Setze übergeordnete Sprachdateien. Fixed verschiedene Plugin Probleme
  * Author:      Joachim Happel
  * Author URI:  https://bbpress.org
+ * Domain Path:       /languages
+ * Text Domain:       rw-toolset
+ * GitHub Plugin URI: https://github.com/rpi-virtuell/RW-ToolSet
+ * GitHub Branch:     master
  * Version:     0.0.4
  /
 
