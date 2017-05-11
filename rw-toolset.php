@@ -5,7 +5,7 @@
  * Description: rpi-virtuell Hacks für Buddypress Instanzen. Erlaubt zusätzliche Dateitypen. Setze übergeordnete Sprachdateien. Fixed verschiedene Plugin Probleme
  * Author:      Joachim Happel
  * Author URI:  https://bbpress.org
- * Version:     0.0.3
+ * Version:     0.0.4
  /
 
 /**
