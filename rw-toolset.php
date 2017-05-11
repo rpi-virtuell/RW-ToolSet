@@ -90,3 +90,33 @@ function rw_fix_correct_theme_textdomain_dir() {
 	}
 }
 add_action( 'after_setup_theme', 'rw_fix_correct_theme_textdomain_dir' );
+
+
+/**
+* Do not use the offical wp language reporsitory from Wordpress for language updates
+*/
+function suppress_language_update_boss_theme() {
+	
+	$updates = get_site_transient('update_themes');
+	
+	if ( !$updates  ){
+	}elseif ( isset ($updates->translations)  ){
+	
+		$arr = $updates->translations;
+		
+		foreach($arr as $k=>$u){
+			
+			if( $u['type']=='theme' && $u['slug']=='boss' ){
+				
+				unset( $updates->translations[$k] );
+				set_site_transient('update_themes', $updates, 86400);
+			}
+			
+		}
+	}
+	
+}
+add_action( 'plugins_loaded', 'suppress_language_update_boss_theme' );
+
+add_filter( 'auto_update_translation', '__return_false' );
+
