@@ -129,7 +129,7 @@ add_filter( 'auto_update_translation', '__return_false' );
 
 function rw_filter_upgrader_pre_download($reply, $download){
 	
-	if(strpos($download, '/translation/theme/boss/1.0.9/')) return true;
+	if(strpos($download, '/translation/theme/boss/')) return true;
 	
 	return $reply;
 	
