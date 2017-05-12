@@ -9,7 +9,7 @@
  * Text Domain:       rw-toolset
  * GitHub Plugin URI: https://github.com/rpi-virtuell/RW-ToolSet
  * GitHub Branch:     master
- * Version:     0.0.4
+ * Version:     0.0.5
  /
 
 /**
