@@ -97,7 +97,8 @@ add_action( 'after_setup_theme', 'rw_fix_correct_theme_textdomain_dir' );
 
 
 /**
-* Do not use the offical wp language reporsitory from Wordpress for language updates
+* fix language update
+* do not use the offical wp language reporsitory from Wordpress for language updates
 */
 function suppress_language_update_boss_theme() {
 	
@@ -124,3 +125,14 @@ add_action( 'plugins_loaded', 'suppress_language_update_boss_theme' );
 
 add_filter( 'auto_update_translation', '__return_false' );
 
+//suppress language updadet after any core, plugin or theme update.
+
+function rw_filter_upgrader_pre_download($reply, $download){
+	
+	if(strpos($download, '/translation/theme/boss/1.0.9/')) return true;
+	
+	return $reply;
+	
+}
+add_filter('upgrader_pre_download', 'rw_filter_upgrader_pre_download', 10, 2);
+// end fix language update
